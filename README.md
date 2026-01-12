@@ -1,16 +1,89 @@
-# React + Vite
+# **Add to Cart React App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Add to Cart** application built with **React**, **Vite**, **Tailwind CSS**, and **React Router**.
+It fetches products from the **Fake Store API** and allows users to **add/remove items from the cart**, update **quantity**, and view the **total price with a 10% discount**.
 
-Currently, two official plugins are available:
+## **Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Fetch products from [Fake Store API](https://fakestoreapi.com/)
+* Display **product image, title, price, and description**
+* **Responsive layout** for mobile, tablet, and desktop
+* **Add/Remove products** from cart
+* **Increase/Decrease product quantity** in cart
+* **Show total price per item** and **total cart price**
+* Apply **10% discount** on final price
+* **Routing** between Products and Cart pages
+* **Global cart state** using React Context API
+* Styled with **Tailwind CSS** for modern UI
 
-## React Compiler
+## **Tech Stack**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React.js + Vite
+* **Routing:** React Router DOM
+* **State Management:** React Context API
+* **Styling:** Tailwind CSS
+* **API:** Fake Store API
 
-## Expanding the ESLint configuration
+## **Installation**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository**
+
+git clone <your-github-repo-url>
+cd add-to-cart-vite
+
+2. **Install dependencies**
+
+npm install
+
+3. **Start the development server**
+
+npm run dev
+
+4. Open the URL shown in terminal (usually `http://localhost:5173/`)
+
+## **Project Structure**
+
+src/
+ ├─ components/
+ │   ├─ ProductCard.jsx
+ │   └─ CartItem.jsx    # optional
+ ├─ pages/
+ │   ├─ Home.jsx
+ │   └─ Cart.jsx
+ ├─ context/
+ │   └─ CartContext.jsx
+ ├─ App.jsx
+ └─ main.jsx
+
+## **Usage**
+
+* Navigate to the **Products page** (`/`) to view all products
+* Click **Add to Cart** to add an item
+* Click **Remove from Cart** to remove an item
+* Navigate to **Cart page** (`/cart`) to manage items
+* Use **+ / - buttons** to increase or decrease quantity
+* View **total price and final price** with 10% discount
+
+## **Deployment**
+
+1. Build the project:
+
+npm run build
+
+2. Deploy on **Netlify**:
+
+   * Go to [Netlify](https://www.netlify.com/) → New Site → Import from GitHub
+   * Select your repository and branch
+   * Set **Build Command**: `npm run build`
+   * Set **Publish Directory**: `dist`
+   * Click **Deploy Site**
+
+3. Your live site URL will be available after deployment
+
+## **Live Demo**
+
+https://kaleidoscopic-chaja-7500d6.netlify.app/
+
+## **License**
+
+This project is **free to use** and **open source**.
